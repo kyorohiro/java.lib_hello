@@ -9,6 +9,7 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    id 'maven'
 }
 
 dependencies {
@@ -35,5 +36,17 @@ jar {
     manifest {
         attributes('Implementation-Title': project.name,
                    'Implementation-Version': project.version)
+    }
+}
+
+def repo = new File(rootDir, "repository")
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${repo.absolutePath}"
+            pom.version = '0.0.1'
+            pom.groupId = 'com.example.kyorohiro'
+            pom.artifactId = 'java.lib_hello'
+        }
     }
 }
