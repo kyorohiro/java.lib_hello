@@ -1,8 +1,8 @@
-Nora Java Library at managing Marven repogitory for Gradle Project
+Nora Java Library at managing Maven repogitory for Gradle Project
 
 
 
-## Create marven repo for gradle project
+## Create maven repo for gradle project
 
 1. create repogitories 
 
