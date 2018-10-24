@@ -6,8 +6,9 @@ Nora Java Library at managing Maven repogitory for Gradle Project
 
 1. create repogitories 
 
+```
   gradle assemble uploadArchives
-
+```
 
 2. cd repogitories 
 
